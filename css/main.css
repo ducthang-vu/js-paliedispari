@@ -20,6 +20,10 @@ li {
 }
 
 /* UTILITIES */
+.black {
+    background: #000;
+}
+
 .big-text {
     font-size: 130%;
 }
@@ -31,7 +35,7 @@ li {
 
 .container {
     padding: 10px;
-    border: 2px solid #000;
+    border: 2px solid #fff;
 }
 
 .flex-nw {
@@ -102,7 +106,7 @@ main > * {
 .output {
     margin-top: 10px;
     padding: 5px;
-    border: 1px solid #000;
+    border: 1px solid #fff;
     width: 440px;
 }
 
