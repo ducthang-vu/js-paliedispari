@@ -34,7 +34,7 @@ function oddsEvens_game(option, number) {
         
     var score = [option, number] 
 
-    score.push(Math.floor(Math.random() * 5 + 1))   // score[2] is computer's number, random from 1 to 5 included
+    score.push(Math.floor(Math.random() * 5 + 1))   // score[2] is computer's number
 
     if ((score[1] + score[2]) % 2 == score[0]) {    
         score.push(1)   // score[3] = 1: user wins, computer loses
