@@ -92,21 +92,6 @@ main > * {
     flex-basis: 50%;
 }
 
-
-/* Main: PALINDROME-SECTION  */
-.input-wrapper {
-    justify-content: center;
-    align-items: center;
-}
-
-.input-wrapper button {
-    padding: 7px;
-}
-
-.input-wrapper input {
-    width: 400px;
-}
-
 .output {
     margin-top: 10px;
     padding: 5px;
@@ -115,8 +100,34 @@ main > * {
 }
 
 
+/* Main: PALINDROME-SECTION  */
+.palindrome-section .input-wrapper {
+    justify-content: center;
+    align-items: center;
+}
+
+.palindrome-section .input-wrapper button {
+    padding: 7px;
+}
+
+.palindrome-section .input-wrapper input {
+    width: 400px;
+}
+
+
 /* Main: ODDSEVENS-SECTION */
 .oddsEvens-section .input-wrapper > * {
     margin-bottom: 15px;
     flex-basis: 100%;
+}
+
+.input-wrapper .button {
+    margin-top: 10px;
+    width: 80px;
+}
+
+
+.oddsEvens-section .input-box-inner {
+    display: inline-block;
+    margin: 5px;
 }
