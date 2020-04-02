@@ -51,28 +51,27 @@ function oddsEvens_game(option, number) {
 /*************/
 var palindromeButton = document.getElementById('play-palindrome')
 var oddEvensButton = document.getElementById('play-oddEvens')
-var palindrome_input = document.getElementById('word')
+var word_input = document.getElementById('word')
 var player_number = [document.getElementById('n1'), document.getElementById('n2'), document.getElementById('n3'), document.getElementById('n4'), document.getElementById('n5')]
 
 
 // EVENTS
 palindromeButton.addEventListener('click', 
     function() {
-        word = palindrome_input.value
         var text_to_user
 
-        if (palindrome(word) == -1) {
+        if (palindrome(word_input.value) == -1) {
             text_to_user = 'ERROR! Empty strings cannot be accepted. Please try again'
-        } else if (palindrome(word)) {
-            text_to_user = 'YES, the word "' + word + '" is a palindrome!'
+        } else if (palindrome(word_input.value)) {
+            text_to_user = 'YES, the word "' + word_input.value + '" is a palindrome!'
         } else {
-            text_to_user = 'NO, the word "' + word + '" is not a palindrome.'
+            text_to_user = 'NO, the word "' + word_input.value + '" is not a palindrome.'
         }
 
         // Presenting output to user, and resetting input
         document.getElementById('palindrome-output').innerHTML = text_to_user
-        palindrome_input.value = ''
-        palindrome_input.focus()
+        word_input.value = ''
+        word_input.focus()
     } 
 )
 
