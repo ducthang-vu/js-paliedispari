@@ -71,6 +71,7 @@ palindromeButton.addEventListener('click',
             text_to_user = 'NO, the word "' + word + '" is not a palindrome.'
         }
 
+        // Presenting output to user, and resetting input
         document.getElementById('palindrome-output').innerHTML = text_to_user
         palindrome_input.value = ''
         palindrome_input.focus()
@@ -100,13 +101,17 @@ oddEvensButton.addEventListener('click',
             }
         }
 
+        // Play the game
         result = oddsEvens_game(choise, number)
+
+    
+        // Presenting output to user
         if (result[1] == 0) {
             text_to_user = 'The computer chose ' + result[0] + '.<br>The total is: ' + (parseInt(number) + result[0]) + '.<br><br>You win!'
         } else {
             text_to_user = 'The computer chose ' + result[0] + '.<br>The total is: ' + (parseInt(number) + result[0]) + '.<br><br>You loses!'
         }
-
+        
         document.getElementById('oddsEvens-output').innerHTML = text_to_user
     }
 )
