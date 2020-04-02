@@ -101,9 +101,9 @@ oddEvensButton.addEventListener('click',
 
         result = oddsEvens_game(choise, number)
         if (result[1] == 0) {
-            text_to_user = 'The computer chose ' + result[0] + '. You win!'
+            text_to_user = 'The computer chose ' + result[0] + '.<br>The total is: ' + (parseInt(number) + result[0]) + '.<br><br>You win!'
         } else {
-            text_to_user = 'The computer chose ' + result[0] + '. You loses!'
+            text_to_user = 'The computer chose ' + result[0] + '.<br>The total is: ' + (parseInt(number) + result[0]) + '.<br><br>You loses!'
         }
 
         document.getElementById('oddsEvens-output').innerHTML = text_to_user
