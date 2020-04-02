@@ -12,7 +12,7 @@ console.log('main.js is working')
 /*************/
 function palindrome(word) {
     // A function accepting a string and returning true if the string is palindrome, otherwise false. Return -1 if string is empty.
-    if (word == '') {return -1}     //validation
+    if (!word) {return -1}     //validation
 
     var reverse = ''
     for (var i = word.length -1; i >= 0; i--) {
