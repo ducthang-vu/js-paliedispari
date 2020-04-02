@@ -24,7 +24,6 @@ function palindrome(word) {
     } else {
         return false
     }
-
 }
 
 
