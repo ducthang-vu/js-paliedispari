@@ -93,7 +93,7 @@ oddEvensButton.addEventListener('click',
         }
 
         // Number chosen by player
-        for (i = 0; i < 5; i++) {
+        for (i = 0; i < player_number.length; i++) {
             if (player_number[i].checked) {
                 number = parseInt(player_number[i].value)
             break
