@@ -44,8 +44,6 @@ function oddsEvens_game(option,number) {
         score.push(1)
     }
     
-    console.log(score)
-    console.log([score[2], score[3]])
     return [score[2], score[3]]
 }
 
