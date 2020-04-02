@@ -32,7 +32,7 @@ function palindrome(word) {
 
 
 function oddsEvens_game(option,number) {
-    // A function modelling a "odds and evens" game bewteen user and computer; parameter "option" being either 0 or 1 for user's choise of "even" or "odd"; and parameter "number" being the number chosen by the user. Return an array, being array[0] the number chosen by the computer; and array[1] = 0 if the player wins, otherwise 1.
+    // A function modelling a "odds and evens" game bewteen user and computer; parameter "option" being either 0 or 1 for user's choise of "even" or "odd"; and parameter "number" being the number chosen by the user. Return an array, being array[0] the number chosen randomly by the computer; and array[1] = 0 if the player wins, otherwise 1.
 
     var score = [option, number] 
 
