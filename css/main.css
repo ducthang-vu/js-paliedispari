@@ -79,14 +79,21 @@ li {
 /* APP */
 .app {
     flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
 }
 
 .app > * {
     width: 100%;
 }
 
+/* HEADER */ 
 
 /* MAIN */
+main {
+    flex-grow: 1;
+}
+
 main > * {
     padding: 10px;
     flex-basis: 50%;
@@ -107,7 +114,7 @@ main > * {
 }
 
 .palindrome-section .input-wrapper button {
-    padding: 7px;
+    padding: 3px 5px;
 }
 
 .palindrome-section .input-wrapper input {
@@ -139,4 +146,5 @@ footer {
     font-size: 5px;
     text-align: right;
     padding: 0 15px 10px;
+    height: 28px;
   }
