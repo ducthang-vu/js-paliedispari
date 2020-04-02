@@ -11,15 +11,15 @@ console.log('main.js is working')
 /* FUNCTIONS */
 /*************/
 function palindrome(word) {
-    // A function accepting a string and returning true if the string is palindrome, otherwise false. Return -1 if string is empty.
-    if (!word) {return -1}     //validation
+    // A function accepting a string and returning true if the string, not considering empy space on both sides, is palindrome, otherwise false. Return -1 if string is empty.
+    if (!word.trim()) {return -1}     //validation
 
     var reverse = ''
-    for (var i = word.length -1; i >= 0; i--) {
-        reverse += word[i]
+    for (var i = word.trim().length -1; i >= 0; i--) {
+        reverse += word.trim()[i]
     }
 
-    if (word.toLowerCase() == reverse.toLowerCase()) {
+    if (word.trim().toLowerCase() == reverse.toLowerCase()) {
         return true
     } else {
         return false
