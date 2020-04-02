@@ -11,7 +11,7 @@ console.log('main.js is working')
 /* FUNCTIONS */
 /*************/
 function palindrome(word) {
-    // A function accepting a string and returning true if the string is palindrome, otherwise false. Return -1 if string is empty
+    // A function accepting a string and returning true if the string is palindrome, otherwise false. Return -1 if string is empty.
     if (word == '') {return -1}
 
     var reverse = ''
