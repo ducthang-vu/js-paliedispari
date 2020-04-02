@@ -56,6 +56,7 @@ var oddEvensButton = document.getElementById('play-oddEvens')
 var palindrome_input = document.getElementById('word')
 var player_number = [document.getElementById('n1'), document.getElementById('n2'), document.getElementById('n3'), document.getElementById('n4'), document.getElementById('n5')]
 
+
 // EVENTS
 palindromeButton.addEventListener('click', 
     function() {
