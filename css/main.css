@@ -131,3 +131,12 @@ main > * {
     display: inline-block;
     margin: 5px;
 }
+
+
+/* FOOTER  */
+footer {
+    font-style: italic;
+    font-size: 5px;
+    text-align: right;
+    padding: 0 15px 10px;
+  }
