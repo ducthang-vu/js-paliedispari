@@ -32,18 +32,21 @@ function palindrome(word) {
 
 
 function oddsEvens_game(option,number) {
-    // A function modelling a "odds and evens" game bewteen user and computer; parameter "option" being either 0 or 1 for user's choise of "even" or "odd"; and parameter "number" being the number chosen by the user from 0 to 5.
+    // A function modelling a "odds and evens" game bewteen user and computer; parameter "option" being either 0 or 1 for user's choise of "even" or "odd"; and parameter "number" being the number chosen by the user. Return an array, being array[0] the number chosen by the computer; and array[1] = 0 if the player wins, otherwise 1.
 
     var score = [option, number] 
-    console.log(score)
 
     score.push(Math.floor(Math.random() * 5 + 1))
+
     if ((score[1] + score[2]) % 2 == score[0]) {
-        console.log('player wins')
+        score.push(0)
     } else {
-        console.log('player loses, computer wins')
+        score.push(1)
     }
-    console.table(score)
+    
+    console.log(score)
+    console.log([score[2], score[3]])
+    return [score[2], score[3]]
 }
 
 
@@ -53,6 +56,7 @@ function oddsEvens_game(option,number) {
 var palindromeButton = document.getElementById('play-palindrome')
 var oddEvensButton = document.getElementById('play-oddEvens')
 var palindrome_input = document.getElementById('word')
+var player_number = [document.getElementById('n1'), document.getElementById('n2'), document.getElementById('n3'), document.getElementById('n4'), document.getElementById('n5')]
 
 // EVENTS
 palindromeButton.addEventListener('click', 
@@ -74,25 +78,36 @@ palindromeButton.addEventListener('click',
     } 
 )
 
+
 oddEvensButton.addEventListener('click', 
     function() {
-        do {
-            var choise = parseInt(prompt('Odds and evens game!\n STEP 1 - Enter 0 to choose EVEN, or 1 for ODD'))
-        
-            if (choise == 0 || choise == 1) {break}
-            else {}
-                alert('Please do enter a number 0 for EVEN or 1 for ODD.')
-        } while (true)
-        
-        do {
-            var number = parseInt(prompt('Odds and evens game!\n STEP 2 - Enter a number from 1 to 5(included).'))
-        
-            if (number < 1 || number > 5 || isNaN(number)) {
-                alert('Please do enter a number from 1 to 5 (included).')
-            } else {break}
-        } 
-        while (true) 
+        var choise 
+        var number 
+        var result = []
+        var text_to_user
 
-        oddsEvens_game(choise, number) 
+        // Odd or even
+        if (document.getElementById('oddEven1').checked) {
+            choise = 1
+        } else {
+            choise = 0
+        }
+
+        // Number chosen by player
+        for (i = 0; i < 5; i++) {
+            if (player_number[i].checked) {
+                number = parseInt(player_number[i].value)
+            break
+            }
+        }
+
+        result = oddsEvens_game(choise, number)
+        if (result[1] == 0) {
+            text_to_user = 'The computer chose ' + result[0] + '. You win!'
+        } else {
+            text_to_user = 'The computer chose ' + result[0] + '. You loses!'
+        }
+
+        document.getElementById('oddsEvens-output').innerHTML = text_to_user
     }
 )
