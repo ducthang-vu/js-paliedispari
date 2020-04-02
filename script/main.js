@@ -45,6 +45,17 @@ function oddsEvens_game(option, number) {
 }
 
 
+function radioInput__checked_value(name) {
+    // A function accepting a name of HTML input elements of type "radio", and returning the value of the checked option.
+    var array = document.getElementsByName(name)
+    for (i = 0; i < array.length; i++) {
+        if (array[i].checked) {
+            return array[i].value
+        }
+    }
+}
+
+
 /**************/
 /* MAIN SCRIPT */
 /*************/
@@ -77,29 +88,13 @@ palindromeButton.addEventListener('click',
 
 oddEvensButton.addEventListener('click', 
     function() {
-        var choise 
-        var number 
         var result = []
         var text_to_user
-
-        // Odd or even
-        if (document.getElementById('oddEven1').checked) {
-            choise = 1
-        } else {
-            choise = 0
-        }
-
-        // Number chosen by player
-        for (i = 0; i < player_number.length; i++) {
-            if (player_number[i].checked) {
-                number = parseInt(player_number[i].value)
-            break
-            }
-        }
+        var choise = parseInt(radioInput__checked_value('oddEven'))
+        var number = parseInt(radioInput__checked_value('player_number'))
 
         // Play the game
         result = oddsEvens_game(choise, number)
-
     
         // Presenting output to user
         if (result[1] == 1) {
