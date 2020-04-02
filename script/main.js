@@ -39,9 +39,9 @@ function oddsEvens_game(option, number) {
     score.push(Math.floor(Math.random() * 5 + 1))   // score[2] is computer's number, random from 1 to 5 included
 
     if ((score[1] + score[2]) % 2 == score[0]) {    
-        score.push(0)   // score[3] = 0, user wins, computer loses
+        score.push(0)   // score[3] = 0: user wins, computer loses
     } else {
-        score.push(1)   // score[3] = 1, computer wins, user loses
+        score.push(1)   // score[3] = 1: computer wins, user loses
     }
     
     return [score[2], score[3]]     
