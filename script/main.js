@@ -64,7 +64,7 @@ palindromeButton.addEventListener('click',
         var text_to_user
 
         if (palindrome(word) == -1) {
-            text_to_user = 'ERROR! Empty string cannot be accepted. Please try again'
+            text_to_user = 'ERROR! Empty strings cannot be accepted. Please try again'
         } else if (palindrome(word)) {
             text_to_user = 'YES, the word "' + word + '" is a palindrome!'
         } else {
