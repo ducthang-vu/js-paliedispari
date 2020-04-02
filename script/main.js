@@ -68,7 +68,7 @@ palindromeButton.addEventListener('click',
         } else if (palindrome(word)) {
             text_to_user = 'YES, the word "' + word + '" is a palindrome!'
         } else {
-            text_to_user = 'NO, the word "' + word + '" is not a palindrome'
+            text_to_user = 'NO, the word "' + word + '" is not a palindrome.'
         }
 
         document.getElementById('palindrome-output').innerHTML = text_to_user
