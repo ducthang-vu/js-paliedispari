@@ -2,7 +2,7 @@
 /* A script:
     1- prompting user to enter a word and returning whether such word is palindrome; and
 
-    2- a odds and evens game between user and computer.
+    2- for playing an odds and evens game between user and computer.
 /************/
 
 console.log('main.js is working')
